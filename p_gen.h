@@ -111,7 +111,7 @@ bool MR_test(mpz_t n, int k){
       if((mpz_cmp(b, num)) == 0){    // if b = n - 1
         check = true;
 	break;
-      }
+      } 
       else if((mpz_cmp_ui(b, 1)) == 0){     // if b = 1
         return(false);
       }
