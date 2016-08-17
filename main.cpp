@@ -10,7 +10,7 @@
 #include "Ex_Euc.h"
 #include "Enc_Dec.h"
 using namespace std;
-
+ 
 void totient(mpz_t p, mpz_t q, mpz_t phi);
 
 // Main function for the RSA program
