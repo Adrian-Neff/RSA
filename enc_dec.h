@@ -13,7 +13,7 @@ void decryption(mpz_t C, mpz_t d, mpz_t N, mpz_t message);
 // Encrypts the message for use in the RSA algorithm
 void encryption(mpz_t C, mpz_t e, mpz_t N, mpz_t message){
   mpz_powm(C, message, e, N);          // C = ((message) ^ e) mod N
-
+ 
   return;
 }
 
