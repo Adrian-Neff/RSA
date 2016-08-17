@@ -41,5 +41,5 @@ void EEA(mpz_t phi, mpz_t e, mpz_t d){
   
   return;
 }
-
+ 
 #endif
