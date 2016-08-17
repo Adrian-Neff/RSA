@@ -58,6 +58,6 @@ void totient(mpz_t p, mpz_t q, mpz_t phi){
   mpz_sub_ui(p2, p, 1);        // p - 1
   mpz_sub_ui(q2, q, 1);        // q - 1
   mpz_mul(phi, p2, q2);        // phi = (p - 1)(q - 1)
-
+ 
   return;
 }
