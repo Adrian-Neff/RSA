@@ -55,6 +55,18 @@ int main(){
     mpz_set_ui(arr[j], array[j]);
     encryption(arr[j], e, N, arr[j]);
   }
+  
+  // Output public and private keys
+  cout << endl;
+  cout << "Public key: (";
+  mpz_out_str(stdout, 10, N);
+  cout << ", ";
+  mpz_out_str(stdout, 10, e);
+  cout << ')' << endl << endl;
+  cout << "Private key: ";
+  mpz_out_str(stdout, 10, d);
+  cout << endl << endl;
+  cout << "Message: ";
 
   // Open file for writing the message to
   ofstream myfile;
@@ -66,6 +78,7 @@ int main(){
       decryption(arr[i2], d, N, arr[i2]);
       cha[i2] = mpz_get_ui(arr[i2]);
       myfile << cha[i2];
+      cout << cha[i2]
     }
   }
   myfile.close();
