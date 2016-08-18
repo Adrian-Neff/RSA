@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstring>
 #include <fstream>
+#include <ctime>
 #include <gmp.h>
 #include "P_gen.h"
 #include "Ex_Euc.h"
@@ -15,6 +16,9 @@ void totient(mpz_t p, mpz_t q, mpz_t phi);
 
 // Main function for the RSA program
 int main(){
+  clock_t start;
+  double time;                                  // Measures running time of program
+  start = clock();
   int k = 65;                                   // Used for accuracy of MR test
   string S;
   mpz_t p, q, N, phi, e, d;                     // Used for encryption and decryption
@@ -88,6 +92,10 @@ int main(){
   for(int x2 = 0; x2 < S.length(); x2++){
     mpz_clear(arr[x2]);
   }
+  
+   // Output run time
+  time = (clock() - start) / (double) CLOCKS_PER_SEC;
+  cout << "Running time: " << time << " seconds";
   
   return(0);
 }
